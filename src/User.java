@@ -50,7 +50,7 @@ public class User {
         String email = scanner.nextLine();
         System.out.println("Password :");
         String password  = scanner.nextLine();
-        String login_query = "SELECT * FROM User WHERE email=? AND pssword =?;";
+        String login_query = "SELECT * FROM User WHERE email=? AND password =?;";
         try{
             PreparedStatement ps = connection.prepareStatement(login_query);
             ps.setString(1,email);
